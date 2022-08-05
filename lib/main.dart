@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_quiz_app/screens/person/create_person/create_person_page.dart';
 import 'screens/calculator/calculator_page.dart';
 import 'screens/to_do_list/to_do_list_page.dart';
-import 'package:flutter_quiz_app/simple_blog_observer.dart';
+import 'package:flutter_quiz_app/blog_observer.dart';
 
 import 'app.dart';
 import 'data/repository/repository.dart';
@@ -11,7 +11,7 @@ import 'data/repository/repository.dart';
 void main() {
   BlocOverrides.runZoned(
     () => runApp(App(repository: Repository())),
-    blocObserver: SimpleBlocObserver(),
+    blocObserver: BlocObserver(),
   );
 }
 
